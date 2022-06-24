@@ -1,0 +1,71 @@
+@use "../mixin/mixin" as mixin;
+@use "../queries/media" as media;
+
+header {
+  @include mixin.container_size(jm);
+  display: inline;
+  figure {
+    @include mixin.image_feature(500px, url("/assets/jumbotron.jpg"));
+    @include mixin.flexbox(column);
+    line-height: 3rem;
+    h1,
+    p {
+      text-transform: uppercase;
+      color: #fafdd6;
+      letter-spacing: calc(0.4rem + 1vw);
+    }
+  }
+  nav {
+    background: #1B262C;
+    overflow: auto;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 1rem 2rem;
+    @include media.mobile{
+      padding: 1rem 1rem;
+    }
+    .icon {
+      @include mixin.icon(30px, true, #f32424, #fafdd6);
+      margin-right: 16px;
+      @include media.mobile{
+        margin-right: 8px;
+      }
+    }
+    ul {
+      display: inline-block;
+      justify-content: center;
+      height: 100%;
+      line-height: 30px;      
+      @include mixin.flexbox(row);
+      li {
+        @include media.mobile{
+          line-height: 2rem;
+        }
+        a {          
+          font-weight: 600;
+          padding: 0 16px;
+          color: #fafdd6dd;
+          @include media.mobile{
+            padding: 0 8px;
+          }
+          &:hover {
+            color: #fafdd6;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    input {
+      line-height: 30px;
+      width: 300px;
+      padding: 0 10px;
+      @include media.tablet{
+        width: 250px;
+      }
+      @include media.mobile{
+        width: 120px;
+      }
+    }
+  }
+}

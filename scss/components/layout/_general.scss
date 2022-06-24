@@ -1,0 +1,59 @@
+@use '../mixin/mixin' as mixin;
+@use "../queries/media" as media;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body{
+  font-family: 'system-ui', 'sans-serif';
+  background: #ffffff;
+  user-select: none;
+}
+
+h1{
+  font-size: calc(1rem + 2vw);
+}
+
+h2{
+  font-size: calc(0.7rem + 1.4vw);
+}
+
+h3{
+  font-size: calc(0.4rem + 0.8vw);
+}
+
+p, li{
+    line-height: 2rem;
+    font-size: calc(0.35rem + 0.7vw);
+    @include media.mobile{
+      line-height: 1.5rem;
+    }
+}
+
+section{
+  margin: 1rem 0;
+}
+
+hr{
+  margin: 1rem auto;
+}
+
+.float_right{
+  float: right;
+}
+
+.float_left{
+  float: left;
+}
+
+

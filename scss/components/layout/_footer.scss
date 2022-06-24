@@ -1,0 +1,18 @@
+@use "../mixin/mixin" as mixin;
+
+footer > p{
+  background: #1B262C;
+  width: 100%;
+  height: 100px;
+  color: #fafdd6dd;
+  text-align: center;
+  line-height: 100px;
+  a{
+    color: #fafdd6dd;
+
+    &:hover{
+      color: #fafdd6;
+      text-decoration: underline;
+    }
+  }
+}

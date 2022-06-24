@@ -1,0 +1,47 @@
+@mixin container_size ($size){
+  @if $size == lg {
+    width: 87%;
+  } @else if $size == md {
+    width: 91%;
+  } @else if $size == sm {
+    width: 96%;
+  } @else if $size == jm {
+    width: 100%;
+  }
+}
+
+@mixin image_feature ($height, $link_image){
+  width: 100%;
+  height: $height;
+  background-image: $link_image;
+  background-size: cover;
+  background-color: #F32424;
+  background-blend-mode: multiply;
+  background-position: center;
+}
+
+@mixin flexbox ($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: $direction;
+}
+
+@mixin icon($size, $circle: false, $bg, $color){
+  width: $size;
+  height: $size;
+  background: $bg;
+  color: $color;
+  text-align: center;
+  line-height: $size;
+
+  @if $circle{
+    border-radius: 50%;
+  }
+}
+
+@mixin card($pad){
+  padding: $pad;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px 2px #00000033;
+}
